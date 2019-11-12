@@ -42,6 +42,7 @@ jobs:
     deploy:
       provider: releases
       draft: true
+      body: "$(cat dist/*.sha256sum)"
       api_key: $EXAILEBOT_OAUTH_KEY
       file_glob: true
       file: dist/*

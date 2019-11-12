@@ -28,6 +28,9 @@ tar --gzip --format=posix --owner 0 --group 0 \
     --transform s/dist\\/copy/exaile-${DIST_VERSION}/ \
     dist/copy
 
+cd dist
+sha256sum "exaile-${DIST_VERSION}.tar.gz" > "exaile-${DIST_VERSION}.tar.gz.sha256"
+
 #
 # See tools/installer/README.md for instructions
 #
